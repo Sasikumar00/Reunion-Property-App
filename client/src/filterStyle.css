@@ -1,0 +1,19 @@
+label{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+input,select{
+    border: 2px solid rgb(198, 198, 198);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.hide-filter{
+    position: absolute;
+    opacity: 0;
+}
+.show-filter{
+    position: relative;
+    opacity: 1;
+}

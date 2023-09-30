@@ -1,0 +1,17 @@
+#ham-menu{
+    position: absolute;
+    width: 100vw;
+    z-index: 99;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.open{
+    transform: translateX(0);
+}
+.close{
+    transform: translateX(-1000px)
+}
+.links:hover{
+    color: #FCA311;
+    text-decoration: underline;
+    transition: all .5s ease-in-out;
+}
