@@ -12,8 +12,10 @@ input,select{
 .hide-filter{
     position: absolute;
     opacity: 0;
+    z-index: -1;
 }
 .show-filter{
     position: relative;
     opacity: 1;
+    z-index: 10;
 }
