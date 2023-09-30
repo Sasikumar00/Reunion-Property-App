@@ -39,7 +39,7 @@ const Login = () => {
             <input type="password" className='border-2 rounded-md px-5 py-1 outline-none' name='password' placeholder='Enter password' onChange={(e)=>{setUserData({...userData,'password': e.target.value})}} required/>
         </label>
         <div className='flex items-center justify-center'>
-        <input value="Login" type="submit" className='bg-[#03C988] hover:bg-[#02B47A] transition-all ease-in-out duration-300 w-[80%] md:w-[50%] mt-5 py-2 text-xl text-white rounded-md cursor-pointer'/>
+        <input value="Login" type="submit" className='bg-[#03C988] hover:bg-[#02B47A] transition-all ease-in-out duration-300 w-[80%] md:w-[50%] mt-5 py-2 md:text-xl text-white rounded-md cursor-pointer'/>
         </div>
         </form>
     </div>
