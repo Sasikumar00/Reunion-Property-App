@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const validateJWT = async(token)=>{
-    const res = await axiosInstance.get(`http://localhost:8000/api/validate`,{headers:{
+    const res = await axiosInstance.get(`${process.env.REACT_APP_API_URL}/api/validate`,{headers:{
       Authorization: token
     }})
     if(res?.data){

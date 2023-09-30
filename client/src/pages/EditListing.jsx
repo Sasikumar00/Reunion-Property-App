@@ -19,7 +19,7 @@ const EditListing = () => {
         if(availabilityInMilli<Date.now()){
             return alert('Availability date cannot be in the past')
         }
-        axiosInstance.patch(`http://localhost:8000/api/property/${params.id}`,propertyDetails,{
+        axiosInstance.patch(`${process.env.REACT_APP_API_URL}/api/property/${params.id}`,propertyDetails,{
             headers:{
                 Authorization: `Bearer ${token}`
             }
@@ -35,7 +35,7 @@ const EditListing = () => {
     }
     const getPropertyData = (token)=>{
         setLoading(true)
-        axiosInstance.get(`http://localhost:8000/api/property/${params.id}`,{
+        axiosInstance.get(`${process.env.REACT_APP_API_URL}/api/property/${params.id}`,{
             headers:{
                 Authorization: `Bearer ${token}`
             }

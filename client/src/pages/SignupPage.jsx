@@ -7,7 +7,7 @@ const SignupPage = () => {
     const [userData, setUserData] = useState({})
     const handleSubmit = (e)=>{
         e.preventDefault()
-        axiosInstance.post(`http://localhost:8000/api/signup`,userData).then(
+        axiosInstance.post(`${process.env.REACT_APP_API_URL}/api/signup`,userData).then(
             res=>{
                 if(res?.status===201){
                     alert(res?.data?.message)

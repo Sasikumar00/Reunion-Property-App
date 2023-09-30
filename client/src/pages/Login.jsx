@@ -7,7 +7,7 @@ const Login = () => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         try{
-            const res = await axiosInstance.post(`http://localhost:8000/api/login`, userData);
+            const res = await axiosInstance.post(`${process.env.REACT_APP_API_URL}/api/login`, userData);
             if(res?.data?.token){
                 localStorage.setItem('jwt', res.data.token)
                 window.location.replace("/")

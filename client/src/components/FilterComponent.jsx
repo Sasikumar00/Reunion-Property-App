@@ -11,7 +11,7 @@ const FilterComponent = (props) => {
             return alert('Availability date cannot be in the past')
         }
         props.setIsLoading(true)
-        axiosInstance.post(`http://localhost:8000/api/property/filter`,props.propertyData,{
+        axiosInstance.post(`${process.env.REACT_APP_API_URL}/api/property/filter`,props.propertyData,{
             headers:{
                 Authorization: `Bearer ${token}`
             }

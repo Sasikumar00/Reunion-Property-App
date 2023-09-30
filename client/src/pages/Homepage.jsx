@@ -24,7 +24,7 @@ const Homepage = () => {
   }
   const getAllListings = ()=>{
     setLoading(true)
-    axiosInstance.get(`http://localhost:8000/api/list-properties`).then(
+    axiosInstance.get(`${process.env.REACT_APP_API_URL}/api/list-properties`).then(
       res=>{
         if(res?.data?.properties){
           setListings(res.data.properties)

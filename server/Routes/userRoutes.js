@@ -10,6 +10,9 @@ router.get('/', userController.testHome)
 //List all available properties
 router.get('/list-properties', userController.getAllListings)
 
+//Filter properties
+router.post('/property/filter',userController.filterProperty)
+
 //List all available properties
 router.get('/property/:id', userController.getListingDetails)
 
@@ -25,7 +28,5 @@ router.delete('/property/:id',authorize, userController.deleteListing)
 //Get the list of all properties listed by user
 router.get('/property',authorize, userController.getMyListings)
 
-//Filter properties
-router.post('/property/filter',authorize,userController.filterProperty)
 
 export default router

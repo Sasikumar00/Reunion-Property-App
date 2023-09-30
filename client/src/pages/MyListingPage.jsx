@@ -21,7 +21,7 @@ const MyListingPage = () => {
 
     const getMyListings = (token) => {
         setLoading(true)
-        axiosInstance.get(`http://localhost:8000/api/property`, {
+        axiosInstance.get(`${process.env.REACT_APP_API_URL}/api/property`, {
             headers: {
             Authorization: `Bearer ${token}`
         }}).then(
@@ -40,7 +40,7 @@ const MyListingPage = () => {
 
     const deleteListing = async(pid)=>{
         try{
-            axiosInstance.delete(`http://localhost:8000/api/property/${pid}`, {
+            axiosInstance.delete(`${process.env.REACT_APP_API_URL}/api/property/${pid}`, {
                 headers:{
                     Authorization: `Bearer ${user}`
                 }
